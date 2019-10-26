@@ -62,6 +62,12 @@ const HooksContainer1 = () => {
                 : <p>No Value</p>
             }
           </p>
+          <p>
+            {context.useContextSubmit
+                ? <p>{context.useContextSubmit}</p>
+                : <p>No User Text</p>
+            }
+          </p>
           {state.stateprop1
             ? <p>state prop1 is true</p>
             : <p>state prop1 is false</p>
