@@ -3,6 +3,7 @@ import * as Reducer from '../store/hooks_state/hooks_reducer';
 import * as ACTIONS from '../store/actions/actions';
 import Context from '../utils/context';
 
+
 const HooksContainer1 = () => {
   const context = useContext(Context);
 
@@ -52,6 +53,8 @@ const HooksContainer1 = () => {
         <button onClick={() => handleDispatchFalse()}>Dispatch False</button>
         <button onClick={() => context.addGlobalValue()}>Add Global Value</button>
         <button onClick={() => context.decGlobalValue()}>Dec Global Value</button>
+        <button onClick={() => context.dispatchContextTrue()}>Dispatch Context True</button>
+        <button onClick={() => context.dispatchContextFalse()}>Dispatch Context False</button>
         <br/>
         <div>
           <p>
@@ -63,6 +66,10 @@ const HooksContainer1 = () => {
           {state.stateprop1
             ? <p>state prop1 is true</p>
             : <p>state prop1 is false</p>
+          }
+          {context.reducerGlobalState
+              ? <p>state prop2 is true</p>
+              : <p>state prop2 is false</p>
           }
           <p>Local State: {stateValue}</p>
           <p>Global State: {context.valueGlobalState}</p>
