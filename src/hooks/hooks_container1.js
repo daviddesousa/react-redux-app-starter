@@ -3,7 +3,6 @@ import * as Reducer from '../store/hooks_state/hooks_reducer';
 import * as ACTIONS from '../store/actions/actions';
 import Context from '../utils/context';
 
-
 const HooksContainer1 = () => {
   const context = useContext(Context);
 
